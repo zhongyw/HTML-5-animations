@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+<main ng-app="myApp">
+  <figure ng-controller="chartCtrl">
+    <div peak-chart data="data">
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      <span face></span>
+      
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+      <label></label>
+    </div>
+    <figcaption>
+      Some data. &nbsp;&nbsp;
+      <button ng-click="paused=!paused">
+        {{ paused && '\u25b8' || '\u2759\u2759' }}
+      </button>
+    </figcaption>
+  </figure>
+</main> 
+
+<script type="text/javascript" src="angular1.0.1.min.js"></script>
+<script type="text/javascript" src="main.js"></script>	
+</body>
+</html>

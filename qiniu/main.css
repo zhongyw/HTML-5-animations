@@ -1,0 +1,563 @@
+.row > div{display:inline-block;}
+
+.icon {
+    display: inline-block;
+}
+
+.section-intro .circle .circle-inner {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 197px;
+    width: 197px
+}
+
+.section-intro .circle .icon {
+    position: absolute
+}
+/***
+雨、伞
+*/
+@-webkit-keyframes drop {
+    0% {
+        top: 0
+    }
+
+    to {
+        top: 197px
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: 0
+    }
+
+    to {
+        top: 197px
+    }
+}
+
+@-webkit-keyframes drop2 {
+    0% {
+        top: -197px
+    }
+
+    to {
+        top: 0
+    }
+}
+
+@keyframes drop2 {
+    0% {
+        top: -197px
+    }
+
+    to {
+        top: 0
+    }
+}
+.icon-circle1 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: 0 -265px;
+    width: 197px;
+    height: 197px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    position: absolute;
+}
+
+
+.section-intro .icon-yudi {
+    -webkit-animation: drop 1.5s linear infinite;
+    animation: drop 1.5s linear infinite;
+    left: 0;
+    top: 0;
+}
+.section-intro  .icon-yudi2 {
+    -webkit-animation: drop2 1.5s linear infinite;
+    animation: drop2 1.5s linear infinite;
+}
+.icon-yudi {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -265px 0;
+    width: 197px;
+    height: 197px
+}
+ 
+/**
+火箭
+*/
+@-webkit-keyframes flicker {
+    0% {
+        background-size: 100%
+    }
+
+    10% {
+        background-size: 20%
+    }
+
+    20% {
+        background-size: 80%
+    }
+
+    30% {
+        background-size: 10%
+    }
+
+    40% {
+        background-size: 70%
+    }
+
+    50% {
+        background-size: 10%
+    }
+
+    60% {
+        background-size: 80%
+    }
+
+    70% {
+        background-size: 50%
+    }
+
+    80% {
+        background-size: 90%
+    }
+
+    90% {
+        background-size: 15%
+    }
+
+    100% {
+        background-size: 70%
+    }
+}
+
+@keyframes flicker {
+    0% {
+        background-size: 100%
+    }
+
+    10% {
+        background-size: 20%
+    }
+
+    20% {
+        background-size: 80%
+    }
+
+    30% {
+        background-size: 10%
+    }
+
+    40% {
+        background-size: 70%
+    }
+
+    50% {
+        background-size: 10%
+    }
+
+    60% {
+        background-size: 80%
+    }
+
+    70% {
+        background-size: 50%
+    }
+
+    80% {
+        background-size: 90%
+    }
+
+    90% {
+        background-size: 15%
+    }
+
+    100% {
+        background-size: 70%
+    }
+}
+.icon-circle2 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -198px -265px;
+    width: 197px;
+    height: 197px
+}
+.icon-rocket {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: 0 -463px;
+    width: 113px;
+    height: 109px;
+    left: 50%;
+    top: 50%;
+    margin-left: -56.5px;
+    margin-top: -70.5px
+}
+.speed .speed-inner .icon-flame {
+    -webkit-animation: flicker 2s ease-out infinite;
+    animation: flicker 2s ease-out infinite
+}
+.speed .speed-inner .icon-flame {
+    background: url(flame.png) center top/100% no-repeat;
+    width: 11px;
+    height: 17px;
+    display: block
+}
+.speed .speed-inner .icon-flame1 {
+    left: 46px;
+    top: 144px
+}
+.speed .speed-inner .icon-flame2 {
+    left: 93px;
+    top: 144px
+}
+
+.speed .speed-inner .icon-flame3 {
+    left: 137px;
+    top: 144px
+}
+/* 齿轮 */
+@-webkit-keyframes rotateCC {
+    from {
+        -webkit-transform: rotate(360deg)
+    }
+
+    to {
+        -webkit-transform: rotate(0deg)
+    }
+}
+
+@keyframes rotateCC {
+    from {
+        -webkit-transform: rotate(360deg)
+    }
+
+    to {
+        -webkit-transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes rotateBB {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes rotateBB {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+.icon-circle3 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -463px 0;
+    width: 197px;
+    height: 197px
+}
+.icon-chilun1 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -706px -479px;
+    width: 41px;
+    height: 41px
+}
+
+.icon-chilun2 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -661px -183px;
+    width: 61px;
+    height: 62px
+}
+.icon-chilun3 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -661px -94px;
+    width: 88px;
+    height: 88px
+}
+.data .icon-chilun1 {
+    -webkit-animation: rotateBB 2.5s linear infinite;
+    animation: rotateBB 2.5s linear infinite
+}
+
+.data .icon-chilun2,.data .icon-chilun3 {
+    -webkit-animation: rotateCC 3s linear infinite;
+    animation: rotateCC 3s linear infinite
+}
+.section-intro .data .data-inner .icon-chilun1 {
+    left: 120px;
+    top: 102px
+}
+
+.section-intro .data .data-inner .icon-chilun2 {
+    left: 100px;
+    top: 34px
+}
+
+.section-intro .data .data-inner .icon-chilun3 {
+    left: 28px;
+    top: 69px
+}
+
+/*公用*/
+.section-intro .data-icon {
+    height: 186px;
+    width: 186px;
+    border-radius: 93px;
+    border: 3px solid;
+    margin: 0 auto;
+}
+/*箱子、圈*/
+.section-intro .data-1 .data-icon {
+    border-color: #26a9e1;
+    position: relative
+}
+.icon-safe01 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -661px 0;
+    width: 96px;
+    height: 93px;
+}
+
+.section-intro .data-1 .icon.icon-safe01 {
+    margin-left: -48px;
+    margin-top: -46.5px;
+}
+.section-intro .data-1 .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.icon-safe02 {
+    background-image: url(sprite-indexGlobal.png);
+    background-position: -661px -246px;
+    width: 48px;
+    height: 48px;
+}
+.data-1 .icon.icon-safe02 {
+    -webkit-animation: rotateBB 5s infinite linear;
+    animation: rotateBB 5s infinite linear;
+}
+.section-intro .data-1 .icon.icon-safe02 {
+    margin-top: -24px;
+    margin-left: -24px;
+    z-index: 3;
+}
+/*方块*/
+@-webkit-keyframes slidein {
+    96% {
+        top: 0
+    }
+
+    to {
+        top: 37.5px
+    }
+}
+
+@keyframes slidein {
+    96% {
+        top: 0
+    }
+
+    to {
+        top: 37.5px
+    }
+}
+@-webkit-keyframes wave {
+    0% {
+        opacity: 0
+    }
+
+    100%,32% {
+        opacity: 1
+    }
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0
+    }
+
+    100%,32% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes wave2 {
+    0%,32% {
+        opacity: 0
+    }
+
+    100%,64% {
+        opacity: 1
+    }
+}
+
+@keyframes wave2 {
+    0%,32% {
+        opacity: 0
+    }
+
+    100%,64% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes wave3 {
+    0%,64% {
+        opacity: 0
+    }
+
+    100%,96% {
+        opacity: 1
+    }
+}
+
+@keyframes wave3 {
+    0%,64% {
+        opacity: 0
+    }
+
+    100%,96% {
+        opacity: 1
+    }
+}
+.cube {
+    width: 22px;
+    height: 22px;
+    position: absolute
+}
+
+.cube1,.cube2,.cube3 {
+    top: 0
+}
+
+.cube4,.cube5,.cube6 {
+    top: 33px
+}
+
+.cube7,.cube8,.cube9 {
+    bottom: 0
+}
+
+.cube1,.cube4,.cube7 {
+    left: 0
+}
+
+.cube2,.cube5,.cube8 {
+    left: 33px
+}
+
+.cube3,.cube6,.cube9 {
+    right: 0
+}
+
+#storage .perspective-inner .cube {
+    background-color: #38ba9c
+}
+.section-intro .data-2 .data-icon>div {
+    margin-top: 45px;
+}
+.perspective {
+    margin: 0 auto;
+    width: 88px;
+    height: 88px;
+    position: relative;
+    overflow: hidden;
+}
+.section-intro .data-2 {
+    color: #38ba9c;
+}
+#storage .perspective-inner {
+    -webkit-transition: all 3s;
+    transition: all 3s;
+    -webkit-animation: slidein 2.5s linear infinite;
+    animation: slidein 2.5s linear infinite;
+}
+.perspective .perspective-inner {
+    position: relative;
+    width: 88px;
+    height: 88px;
+}
+#storage .perspective-inner .cube1 {
+    -webkit-animation: wave 2.5s linear infinite;
+    animation: wave 2.5s linear infinite
+}
+
+#storage .perspective-inner .cube2 {
+    -webkit-animation: wave2 2.5s linear infinite;
+    animation: wave2 2.5s linear infinite
+}
+
+#storage .perspective-inner .cube3 {
+    -webkit-animation: wave3 2.5s linear infinite;
+    animation: wave3 2.5s linear infinite
+}
+/*时间*/
+.section-intro .data-3 {
+    color: #8879b8
+}
+
+.section-intro .data-3 .data-icon {
+    border-color: #8879b8
+}
+#clock {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background: #8879b8;
+    margin: 30px auto 0;
+    border-radius: 50%
+}
+
+#clock:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    margin: -4px 0 0 -4px;
+    border-radius: 50%
+}
+#clock span.hand {
+    background: #fff;
+    position: absolute;
+    left: 50%
+}
+
+#clock span.hand.second {
+    height: 55px;
+    width: 6px;
+    margin-left: -3px;
+    margin-top: 5px
+}
+
+#clock span.hand.hour {
+    height: 40px;
+    width: 6px;
+    margin-left: -3px;
+    top: 20px
+}
+#clock span.hand.second {
+    -webkit-animation: rotateBB 10s infinite linear;
+    animation: rotateBB 10s infinite linear;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+<head>
+<style type="text/css">
+
+/*************
+说明：
+body的高度还是不能设置为100%，没用， 需要设置成xxx px
+<div class="bg_box">注释掉了， 这个可能是用来兼容旧浏览器， 针对旧浏览器， 只显示图片，
+bg_xnet9.jpg 这个文件应该就是旧浏览器兼容文件
+ic_xnet9.jpg则是动画用的背景， 比bg_xnet9.jpg要大， 用于旋转背景
+
+**/
+
+body{
+	width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    font: 12px/1.5 "Microsoft YaHei", 微软雅黑, tahoma, arial, simsun, 宋体;
+    background: rgb(0, 0, 0);
+}
+.bg_box{position: absolute;width: 100%;height: 100%;top: 0;left: 0;background-position: center center;background-repeat: no-repeat;}
+.bg_box img{position: absolute;top: 50%;left: 50%;}
+
+.xnet9 .btn_product{border-color: #fff;border-color: rgba(255,255,255,0.7);color:#fff;}
+.xnet9 .page_bg{position: absolute;top: 50%;left: 50%;width:2500px;height: 1600px;margin: -800px 0 0 -1250px;transform-origin: center 708px;-webkit-transform-origin: center 708px;}
+.css3 .xnet9 .page_bg{display: block;}
+.css3 .xnet9 .bg_box{display: none;}
+.xnet9 .page_bg:before{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url('ic_xnet9.jpg') no-repeat center center;transform-origin: center 708px;-webkit-transform-origin: center 708px;}
+.xnet9.show .page_bg{
+	animation: p1bg_effect1 300s both infinite linear;
+	-webkit-animation: p1bg_effect1 300s both infinite linear;
+} 
+@keyframes p1bg_effect1{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(-360deg);}
+}
+@-webkit-keyframes p1bg_effect1{
+	0%{-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(-360deg);}
+}
+.xnet9.show .page_bg:before{
+	animation: p1bg_effect2 20s both linear;
+	-webkit-animation: p1bg_effect2 20s both linear;
+} 
+@keyframes p1bg_effect2{
+	0%{transform: scale(1);}
+	100%{transform: scale(1.1);}
+}
+@-webkit-keyframes p1bg_effect2{
+	0%{-webkit-transform: scale(1);}
+	100%{-webkit-transform: scale(1.1);}
+}
+
+.xnet9 canvas{position: absolute;top: 0;left: 0;z-index: 10;pointer-events:none;}
+
+</style>
+</head>
+<body style="background:#000;">
+<div class="product_box xnet9 show">
+	<!-- <div class="bg_box">
+	  <img src="bg_xnet9.jpg" style="width: 1248px; height: auto; margin: -351px 0px 0px -624px;">
+	</div> -->
+	<!-- 画布 -->
+	<canvas id="canvas"></canvas>
+	<div class="content small3">
+	  <span class="page_bg"></span>
+	  <div class="main_box" style="height: 0px; margin-top: 0px;">
+	    <h2 class="hide_txt png">
+	      精彩，一下就有
+	    </h2>
+	    <a clickid="gwlb1-1" href="http://xl9.xunlei.com/" target="_blank" class="btn_product" title="迅雷">迅雷</a>
+	  </div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="effect.js"></script>
+<script type="text/javascript">
+	
+	var isCss3=function(){
+      var style=document.createElement("div").style;
+        for(var k in style){
+          if(k.toLowerCase().indexOf("animation")>=0){
+            return true;
+          }
+         }
+         return false;
+    }();
+    var isIE6=navigator.userAgent.indexOf("MSIE 6.0") > 0;
+
+    //画布
+    if(isCss3){
+      cvsEffect.start();
+      cvsEffect.one();
+    }
+    // //页面自缩放
+    // var resize=function(){
+    //   var w=$(window).width(),
+    //       h=$(window).height();
+    //   $wrap.height(h);
+    //   $moreNav.height(h);
+    //   if(w/h<1920/1080){
+    //     $bgs.height(h).css({width:"auto",margin:-.5*h+"px 0 0 "+-.5*1920/1080*h+"px"});
+    //   }else{
+    //     $bgs.width(w).css({height:"auto",margin:-.5*w*1080/1920+"px 0 0 "+-.5*w+"px"});
+    //   }
+    //   var imgH=$bgs.height();
+    //   $mainBoxs.height(imgH).css("margin-top",-.5*imgH+"px");
+    //   var cls;
+    //   if(isCss3){
+    //     document.getElementById("wrap").className="wrap big_view xbig css3";
+    //     switch(true){
+    //       case w>=1920:{cls="";break;}
+    //       case w<1920&&w>=1680:{cls="small9";break;}
+    //       case w<1680&&w>=1600:{cls="small8";break;}
+    //       case w<1600&&w>=1536:{cls="small7";break;}
+    //       case w<1536&&w>=1440:{cls="small6";break;}
+    //       case w<1440&&w>=1366:{cls="small5";break;}
+    //       case w<1366&&w>=1280:{cls="small4";break;}
+    //       case w<1280&&w>=1024:{cls="small3";break;}
+    //       case w<1024:{cls="small2";break;}
+    //     }
+    //     for(var i=0;i<data.pLength;i++){
+    //       $pages.eq(i).find(".content").attr("class","content "+cls);
+    //     }
+
+    //     $productBtns.find(".content").attr("class","content "+cls);
+    //   }else{
+    //     switch(true){
+    //       case w>=1600:{cls="big_view";break;}
+    //       case w<1600&&w>=1440:{cls="mid_view";break;}
+    //       case w<1440:{cls="small_view";break;}
+    //     }
+    //     var ws=$wrap[0].className;
+    //     if(isIE6&&(ws.indexOf("big")!=-1||ws.indexOf("mid")!=-1||ws.indexOf("small")!=-1)&&ws.indexOf(cls)==-1)
+    //       location.reload();
+    //     wrap.className="wrap "+cls;
+    //   }  
+    //   aDD=$controls.eq(0).width()+parseInt($controls.eq(0).css("margin-right").slice(0,-2))*2;   
+    // };
+    // $(window).resize(resize);
+    // resize();
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.svg-container{
+  padding-bottom:70.3125%;
+  position:relative
+}
+
+.svg-container svg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  overflow:hidden
+}
+
+.line{
+  stroke:#2c202d;
+  stroke-width:5px
+}
+
+
+/* Pen for http://blog.legomushroom.com/2014/03/defining-advanced-animation-path/ */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="w3c">
+<head>
+<style type="text/css">
+body{
+  background: url(bg.jpg) no-repeat center;
+  background-size: cover;
+}
+#ft_word, #ft_control {
+    left: 50%;
+    position: absolute;
+}
+#ft_control.up {
+    background-position: -580px -50px;
+}
+#ft_control.use {
+    cursor: pointer;
+}
+#ft_control {
+    background: url(bg-arrow.png) no-repeat -530px -50px;
+    bottom: 0;
+    height: 72px;
+    margin-left: -22px;
+    width: 45px;
+}
+
+#ft_word {
+    background: url(bg-arrow.png) no-repeat -280px 0;
+    bottom: 40px;
+    height: 0;
+    margin-left: -170px;
+    overflow: hidden;
+    padding-top: 16px;
+    width: 340px;
+}
+</style>
+</head>
+<body>
+<canvas id="background"></canvas>
+<canvas id="tmp" height="400" width="400"></canvas>
+<div id="wrap">
+  <footer id="footer">
+    <section id="ft_word" class="pngfix">博观而约取 厚积而薄发</section>
+    <section id="ft_control" class="pngfix"></section>
+  </footer>
+</div>
+<script src="background.js" ></script>
+</body>
+</html>
